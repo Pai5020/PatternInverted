@@ -1,31 +1,27 @@
 public class Main {
     public static void main(String[] args) {
-        int i, j,k;
+        int i, j;
 
-        for (i= 0; i<=6 ; i++) {
-
-            if (i % 2 != 0) {
-
-                for (j = i; j < 6; j++) {
+        for (i = 1; i <= 7; i += 2) {
+            for (j = 1; j <= 7; j++) {
+                if (j < 7 - i + 1) {
                     System.out.print(" ");
-                }
-
-                for (k = 1; k <= i; k++) {
+                } else {
                     System.out.print("*");
                 }
-                System.out.println(" ");
             }
+            System.out.println();
         }
-        for (i=5; i>=1; i--) {
-            if (i % 2 != 0) {
-                for (j = i; j <= 5; j++) {
+
+        for (i = 7; i >= 1; i -= 2) {
+            for (j = 1; j <= 7; j++) {
+                if (j <= 7 - i) {
                     System.out.print(" ");
-                }
-                for (k = 1; k <= i; k++) {
+                } else {
                     System.out.print("*");
                 }
-                System.out.println("");
             }
+            System.out.println();
         }
     }
 }
